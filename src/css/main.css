@@ -7,6 +7,7 @@
 .mainhead{
     width: 100%;
     height: 22vh;
+    background-color: rgb(252, 252, 252);
 }
 .header{
     width: 100%;
@@ -14,12 +15,24 @@
     border-bottom: 1px solid rgb(229, 229, 229);
     display: flex;
     justify-content: space-around;
+    background-color: rgb(252, 252, 252);
 }
 
-.Title > img{
+.Title > a > img{
     margin: 15px 15px 20px;
     width: 100%;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    
+}
+.Title {
+    margin: 0 0 0 15px;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 .vibor{
     display: flex;
@@ -36,6 +49,7 @@
     color: #FF0000;
     cursor: pointer;
 }
+
 .vibor1:hover{
     text-decoration: underline 1px solid gray  ;
     transition: 0.2s all;
@@ -157,16 +171,17 @@
 }
 .btn4:hover > .arrow{
     color: white;
-    transition: 0.5s all;
 }
 .arrow1{
     margin: 0 0 0 10px;
+    transition: 0.5s all;
 }
 .foothead{
     width: 100%;
     height: 11vh;
     border-bottom: 1px solid rgb(226, 226, 226);
     display: flex;
+    background-color: rgb(252, 252, 252);
 }
 .menu{
     display: flex;
@@ -174,6 +189,15 @@
     width: 13%;
     height: 100%;
     justify-content: center;
+    user-select: none;
+}
+.menu1{
+    display: none;
+    align-items: center;
+    width: 13%;
+    height: 100%;
+    justify-content: center;
+    user-select: none;
 }
 .menuP{
     margin: 0 0 0 10px;
@@ -219,6 +243,9 @@
     z-index: 2;
     color: #323232;
 }
+.inputnone{
+    display: none;
+}
 .smails{
     width: 20%;
     display: flex;
@@ -239,11 +266,190 @@
 .scales{
     cursor: pointer;
 }
+.menuafterclick{
+    background-color: rgb(230, 230, 230);
+    border-bottom-right-radius: 10px;
+    width: 200px;
+    height: 45vh;
+    margin: 0 0 10px 0 ;
+    display: none;
+    border: 1px solid rgb(65, 65, 65);
+    
+}
+.btnsentings , .aboutas ,.company{
+    background-color: grey;
+    width: 80%;
+    margin: 15px 15px;
+    padding: 10px 0;
+    border: 1px solid black;
+    outline: 1px solid black;
+    cursor: pointer;
+    border-radius:10px ;
+    font-size: 18px;
+    color: whitesmoke;
+    transition: 0.5s all;
+}
+.btnsentings:hover , .aboutas:hover ,.company:hover{ 
+    background-color: rgb(169, 189, 255);
+    border: 1px solid rgb(255, 205, 205);
+    outline: 2px solid rgb(82, 82, 82);
+    color: rgb(66, 66, 66);
+    transition: 0.5s all;
+}
+.review{
+    background-color: transparent;
+    border: none;
+    transition: 0.5s all;
+    margin: 0px 15px;
+    padding: 13px 0;
+    cursor: pointer;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    width: 80%;
+    animation-name: review;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+.review:hover{
+    text-decoration: underline solid 2px black ;
+    margin: 0px 20px;
+    animation-name: review1;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes review {
+    0%{
+        color: black;
+    }
+    30%{
+        color: #FF0000;
+    }
+    65%{
+        color: blue;
+    }
+    80%{
+        color: #17a539;
+    }
+}
+@keyframes review1 {
+    0%{
+        text-decoration: underline solid 2px black ;
+        color: black;
+    }
+    30%{
+        text-decoration: underline solid 2px #FF0000 ;
+        color: #FF0000;
+    }
+    65%{
+        text-decoration: underline solid 2px blue ;
+        color: blue;
+    }
+    80%{
+        text-decoration: underline solid 2px #17a539 ;
+        color: #17a539;
+    }
+}
+.sentings{
+    background-color: rgb(230, 230, 230);
+    border-bottom-right-radius: 10px;
+    width: 15%;
+    height: 40vh;
+    margin: 0 0 10px 0 ;
+    border: 1px solid rgb(65, 65, 65);
+    display: none;
+}
+.lighting{
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    margin: 15px 15px;
+    padding: 10px 0;
+    border: 1px solid black;
+    outline: 1px solid black;
+    cursor: pointer;
+    border-radius:10px ;
+    font-size: 18px;
+    color: rgb(43, 43, 43);
+    transition: 0.5s all;
+}
+.lighting:hover{
+    background-color: rgb(101, 101, 101);
+    width: 80%;
+    margin: 15px 15px;
+    padding: 10px 0;
+    border: 1px solid rgb(255, 121, 121);
+    outline: 1px solid black;
+    cursor: pointer;
+    border-radius:10px ;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    transition: 0.5s all;
+}
+.svet , .temn{
+    display: none;
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    margin: 15px 15px;
+    padding: 10px 0;
+    border: 1px solid black;
+    outline: 1px solid black;
+    cursor: pointer;
+    border-radius:10px ;
+    font-size: 18px;
+    color: rgb(43, 43, 43);
+    transition: 0.5s all;
+    text-align: center;
+}
+.svet{
+    color: yellow;
+    background-color: #9e9e9e;
+}
+.svet:hover{
+    background-color: #737373;
+}
+.temn{
+    color: #4b5563;
+    background-color: #f3f3f3;
+}
+.temn:hover{
+    background-color: #b3b3b3;
+    color: #4b4b4b;
+}
+.btnsligh{
+    display: flex;
+    width: 100%;
+    height: 30%;
+}
+
+.X{
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.5s all;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    display: none;
+    z-index: 2;
+}
+
+.X:hover{
+    background-color: red;
+    color: rgb(255, 255, 255);
+    transition: 0.5s all;
+}
+.flex{
+    display: flex;
+    
+}
 .afterlogin{
-    width: 35%;
+    width: 440px;
     height: 150vh;
     border-left: 1px solid lightgray;
     display: none;
+    background-color: white;
 }
 .afterlogin1{
     width: 100%;
@@ -355,6 +561,8 @@
 }
 .inputs{
     height: 23%;
+    
+    
 }
 .inputpochta{
     width: 100%;
@@ -362,6 +570,7 @@
     height: 50%;
     align-items: center;
     justify-content: center;
+    background-color: transparent;
 }
 .pochta{
     display: flex;
@@ -399,6 +608,7 @@
     height: 50%;
     align-items: center;
     justify-content: center;
+    background-color: transparent;
 }
 .pass{
     display: flex;
@@ -467,15 +677,18 @@
     padding: 20px 0;
     font-size: 25px;
     background-color: red;
-    border: none;
+    border: 1px solid gray;
     border-radius: 10px;
     color: white;
     cursor: pointer;
     transition: 0.5s all;
+    
 }
 .btnafterlogin > button:hover{
     transition: 0.5s all;
-    background-color: #0022ff;
+    background-color: rgb(181, 162, 162);
+    color: #323232;
+    border: 1px solid black;
 }
 .regestrtion{
     display: flex;
@@ -500,4 +713,42 @@
 }
 .reges:hover{
     text-decoration: underline 1px solid rgb(0, 0, 0);
+}
+@media(max-width:1440px){
+    .Title{
+        width: 17%;
+        align-items: center;
+        display: flex;
+    }
+    .vibor{
+        font-size: 23px;
+    }
+    .mainhead{
+        height: 18vh;   
+    }
+    .header{
+        height: 9vh;
+    }
+    .footheader{
+        height: 9vh;
+    }
+}
+@media(max-width:1290px){
+    .Title{
+        width: 15%;
+        align-items: center;
+        display: flex;
+    }
+    .vibor{
+        font-size: 20px;
+    }
+    .mainhead{
+        height: 22vh;   
+    }
+    .header{
+        height: 11vh;
+    }
+    .footheader{
+        height: 11vh;
+    }
 }
