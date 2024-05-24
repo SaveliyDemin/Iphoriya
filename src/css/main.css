@@ -2,6 +2,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
+}
+.topbtn{
+    cursor: pointer;
+    position: fixed;
+    right: 50px;
+    bottom: 40px;
+    color: #ffffff;
+    background-color: rgba(49, 48, 45, 0.461);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px 20px;
+    font-size: 30px;
+    transition: 0.5s all;
+    z-index: 100;
+}
+
+.topbtn:hover{
+    background-color: rgba(113, 113, 150, 0.365);
+    color: rgb(0, 0, 0);
+    transition: 0.5s all;
 }
 
 .mainhead{
@@ -16,6 +37,7 @@
     display: flex;
     justify-content: space-around;
     background-color: rgb(252, 252, 252);
+    
 }
 
 .Title > a > img{
@@ -28,11 +50,12 @@
 }
 .Title {
     margin: 0 0 0 15px;
-    width: 100%;
     cursor: pointer;
     display: flex;
-    align-items: center;
     height: 100%;
+    width: 15%;
+    align-items: center;
+    display: flex;
 }
 .vibor{
     display: flex;
@@ -269,8 +292,8 @@
 .menuafterclick{
     background-color: rgb(230, 230, 230);
     border-bottom-right-radius: 10px;
-    width: 200px;
-    height: 45vh;
+    width: 220px;
+    height: 50vh;
     margin: 0 0 10px 0 ;
     display: none;
     border: 1px solid rgb(65, 65, 65);
@@ -355,7 +378,7 @@
     background-color: rgb(230, 230, 230);
     border-bottom-right-radius: 10px;
     width: 15%;
-    height: 40vh;
+    height: 50%;
     margin: 0 0 10px 0 ;
     border: 1px solid rgb(65, 65, 65);
     display: none;
@@ -444,6 +467,148 @@
     display: flex;
     
 }
+.posle{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff0000;
+    font-size: 42px;
+}
+.posle > p{
+    cursor: pointer;
+}
+.reviewlook{
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    color: #930000;
+    font-size: 22px;
+}
+.reviewlook > p{
+    cursor: pointer;
+    transition: 0.2s all;
+}
+.reviewlook > p:hover{
+    text-decoration: underline;
+    color: #ce0000;
+    margin: 0 0 0 5px;
+}
+.reviewposlook{
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    color: #ff0000;
+    font-size: 25px;
+}
+.reviewposlook > p{
+    cursor: pointer;
+    transition: 0.2s all;
+}
+.reviewposlook > p:hover{
+    text-decoration: underline;
+    color: #ce0000;
+    margin: 0 0 0 5px;
+}
+.afterclickreview{
+    background-color: #dbdbdb;
+    width: 100%;
+    height: 450px;
+    background-color: rgb(228, 228, 228);
+    border-bottom-right-radius: 10px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    display: none;
+    border-top: 1px solid black;
+    
+}
+.formarev{
+    background-color: #dbdbdb;
+    width: 100%;
+    height: 350px;
+    background-color: rgb(228, 228, 228);
+    margin: 30px 0;
+}
+.revpoc {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.review1{
+    width: 105%;
+    height: 70%;
+}
+.emailrev , .reviewlabel{
+    font-size: 23px;
+    color: #000000;
+    cursor: pointer;
+    margin: 0 25px;
+    transition: 0.5s all;
+}
+.reviewlabel{
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+}
+.reviewinp{
+    width: 100%;
+    margin: 10px 40px;
+    height: 80%;
+}
+.fname{
+    width: 90%;
+    text-align: center;
+    
+}
+.emailrev:hover , .reviewlabel:hover{
+    color: #FF0000;
+}
+.revemailinp , .reviewinp{
+    padding: 10px 0;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background-color: #b3b3b3;
+    color: white;
+    text-align: center;
+    outline: 1px solid black;
+    transition: 0.5s all;
+    font-size: 20px;
+    cursor: pointer;
+}
+.reviewinp{
+    width: 80%;
+}
+.revemailinp:hover , .reviewinp:hover{
+    border: 1.5px solid white ;
+}
+.btnreview1{
+    width: 100%;
+    height: 23%;
+    display: flex;
+    justify-content: end;
+    align-items: center; 
+}
+.btnreview{
+    width: 25%;
+    height: 60%;
+    color: #ce0000;
+    font-size: 20px;
+    margin: 0 50px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: whitesmoke;
+    transition: 0.2s all;
+}
+.btnreview:hover{
+    background-color: #cdcdcd;
+    color: #FF0000;
+}
+
 .afterlogin{
     width: 440px;
     height: 150vh;
@@ -714,31 +879,8 @@
 .reges:hover{
     text-decoration: underline 1px solid rgb(0, 0, 0);
 }
-@media(max-width:1440px){
-    .Title{
-        width: 17%;
-        align-items: center;
-        display: flex;
-    }
-    .vibor{
-        font-size: 23px;
-    }
-    .mainhead{
-        height: 18vh;   
-    }
-    .header{
-        height: 9vh;
-    }
-    .footheader{
-        height: 9vh;
-    }
-}
+
 @media(max-width:1290px){
-    .Title{
-        width: 15%;
-        align-items: center;
-        display: flex;
-    }
     .vibor{
         font-size: 20px;
     }
