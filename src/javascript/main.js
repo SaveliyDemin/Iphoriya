@@ -32,14 +32,14 @@ const daxil = document.querySelector(".daxil");
 const noakk = document.querySelector(".noakk");
 const reges = document.querySelector(".reges");
 const menuafterclick = document.querySelector(".menuafterclick");
-const btnsentings  = document.querySelector(".btnsentings ");
-const sentings  = document.querySelector(".sentings ");
-const lighting  = document.querySelector(".lighting");
-const svet  = document.querySelector(".svet");
-const temn  = document.querySelector(".temn");
-const body  = document.querySelector("body");
-const X  = document.querySelector("X");
-const X1  = document.querySelector("X1");
+const btnsentings = document.querySelector(".btnsentings ");
+const sentings = document.querySelector(".sentings ");
+const lighting = document.querySelector(".lighting");
+const svet = document.querySelector(".svet");
+const temn = document.querySelector(".temn");
+const body = document.querySelector("body");
+const X = document.querySelector("X");
+const X1 = document.querySelector("X1");
 const topbtn = document.querySelector(".topbtn");
 const review = document.querySelector(".review");
 const afterclickreview = document.querySelector(".afterclickreview");
@@ -51,6 +51,33 @@ const rewiewlookpar = document.querySelector(".rewiewlook1");
 const rewiewinpval = document.querySelector(".rewiewinpval");
 const reviewlook = document.querySelector(".reviewlook");
 const reviewposlook = document.querySelector(".reviewposlook");
+const afterclickprice = document.querySelector(".afterclickprice");
+const input = document.querySelector(".input");
+const otmenaprice = document.querySelector(".otmenaprice");
+const container = document.querySelector(".container");
+
+
+otmenaprice.addEventListener('click', function(){
+    afterclickprice.style = "display:none;";
+    body.style = "background-color: white";
+    foothead.style = "background-color: rgb(252, 252, 252);";
+    header.style = "background-color: rgb(252, 252, 252);";
+    container.style = "display:none;";
+});
+btn1.addEventListener('click', function(){
+    container.style = "display:block;";
+    afterclickprice.style = "display:block;";
+    body.style = "background-color: #4b55632d;";
+    foothead.style = "background-color: #4b55632d;";
+    header.style = "background-color: #4b55632d;";
+    menuafterclick.style = "display:none;";
+    afterlogin.style = "display:none;";
+    sentings.style = "display:none;";
+    afterclickreview.style = "display:none;";
+    menu.style = "display:block;display:flex;";
+    menu1.style = "display: none;";
+    afterlogin.style = "display:none;";
+});
 topbtn.addEventListener('click', tophand );
 // window.addEventListener('scroll', namewindow); 
 function tophand(){
@@ -163,9 +190,14 @@ btn2.addEventListener('click', function(){
     menu1.style = "display: none;";
     menu.style = "display: block;";
     menu.style = "display:flex;";
+    afterclickprice.style = "display:none;";
+    container.style = "display:block;";
+    body.style = "background-color: #00000021;";
 });
 otmena.addEventListener('click', function(){
     afterlogin.style = "display: none;";
+    container.style = "display:none;";
+    body.style = "background-color: white;";
     input1.value = "";
     input2.value = "";
 }); 
@@ -175,6 +207,7 @@ menu.addEventListener('click', function(){
     menu1.style = "display:flex;";
     menuafterclick.style = "display:block;";
     afterlogin.style = "display: none;";
+    afterclickprice.style = "display: none;";
 }); 
 menu1.addEventListener('click', function(){
     menu.style = "display:block;";

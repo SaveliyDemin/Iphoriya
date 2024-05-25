@@ -4,6 +4,115 @@
     box-sizing: border-box;
     user-select: none;
 }
+.container{
+    width: 100%;
+    height: 22vh;
+    position: absolute;
+    z-index: 10;
+    display: none;
+}
+.afterclickprice1{
+    width: 3200px;
+    height: 60vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin:10px 0;
+}
+.afterclickprice{
+    width: 70%;
+    height: 40vh;
+    border-radius: 10px;
+    display: none;
+    border: 1px solid black;
+    background-color: white;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+.otmenaprice1{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items:center ;
+}
+.otmenaprice{
+    padding: 7px 10px;
+    border-radius: 100%;
+    text-align: center;
+    cursor: pointer;
+    margin: 5px 20px;
+    background-color: transparent;
+    font-size: 15px;
+    border: 1px solid gray;
+    color: gray;
+}
+.h3alcr{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+.pricetitle{
+    display: flex;
+    width: 100%;
+    height: 25%;
+    
+}
+.pricetitle > .h3alcr > h3{
+    display: flex;
+    cursor: pointer;
+    width: 100%;
+    color: #000000c9;
+}
+.kartsform{
+    height: 75%;
+    width: 100%;
+}
+.kart1 , .kart2 , .kart3 {
+    width: 30%;
+    height: 50%;
+    background-color: #d3d3d38d;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin: 5px 15px;
+}
+.kart2 > img{
+    width: 90%;
+}
+.kart3 > img{
+    width: 100%;
+    padding: 3px 0;
+}
+.kart4flex{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    
+}
+.kart4{
+    width: 30%;
+    height: 100%;
+    background-color: #d3d3d38c;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.123);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+.kart4 > img{
+    width: 90%;
+}
+.kartsflex{
+    display: flex;
+    justify-content: center;
+}
 .topbtn{
     cursor: pointer;
     position: fixed;
@@ -29,6 +138,7 @@
     width: 100%;
     height: 22vh;
     background-color: rgb(252, 252, 252);
+    
 }
 .header{
     width: 100%;
@@ -45,8 +155,7 @@
     width: 100%;
     cursor: pointer;
     display: flex;
-    align-items: center;
-    
+    align-items: center;    
 }
 .Title {
     margin: 0 0 0 15px;
@@ -292,7 +401,7 @@
 .menuafterclick{
     background-color: rgb(230, 230, 230);
     border-bottom-right-radius: 10px;
-    width: 220px;
+    width: 800px;
     height: 50vh;
     margin: 0 0 10px 0 ;
     display: none;
@@ -377,11 +486,12 @@
 .sentings{
     background-color: rgb(230, 230, 230);
     border-bottom-right-radius: 10px;
-    width: 15%;
+    width: 60%;
     height: 50%;
     margin: 0 0 10px 0 ;
     border: 1px solid rgb(65, 65, 65);
     display: none;
+    
 }
 .lighting{
     background-color: rgb(255, 255, 255);
@@ -513,7 +623,7 @@
 }
 .afterclickreview{
     background-color: #dbdbdb;
-    width: 100%;
+    width: 5000px;
     height: 450px;
     background-color: rgb(228, 228, 228);
     border-bottom-right-radius: 10px;
@@ -615,6 +725,30 @@
     border-left: 1px solid lightgray;
     display: none;
     background-color: white;
+    animation-name: movinglog;
+    animation-iteration-count: 1;
+    animation-duration: 0.7s;
+    animation-direction: alternate;
+    
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+@keyframes movinglog {
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0.15;
+    }
+    50%{
+        opacity: 0.4;
+    }
+    80%{
+        opacity: 0.7;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 .afterlogin1{
     width: 100%;
