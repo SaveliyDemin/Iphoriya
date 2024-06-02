@@ -75,8 +75,13 @@ const aboutcompany = document.querySelector(".aboutcompany");
 const ktomititle = document.querySelector(".ktomititle");
 const aboutcompanyotmena = document.querySelector(".aboutcompanyotmena");
 
+
 aboutcompanyotmena.addEventListener('click', function(){
     main1.style = "display:none;";
+    
+});
+nomer.addEventListener('click', function(){
+    alert("Вы уверены что хотите позвонить нам")
 });
 company.addEventListener('click', function(){
     dopgl.innerHTML =
@@ -95,8 +100,32 @@ input.addEventListener('click', function(){
         <h3 class="dop-glavnaya">${gininput}</h3>
     `
 });
+btninput.addEventListener('click', function(){
+    if (input.value != "" ) {
+        let inputpoiskvalue = input.value;
+        
+
+        dopgl.innerHTML =
+        `
+            <h3 class="dop-glavnaya">Результат поиска для "${inputpoiskvalue}"</h3>
+        `
+        input.value = "";
+    }
+    else{
+        dopgl.innerHTML =
+        `
+            <h3 class="dop-glavnaya">Не найдено</h3>
+        `
+    }
+    
+
+});
 afterclickprice1.addEventListener('click', function(){
     btninput.style = "display:none;";
+});
+header.addEventListener('click', function(){
+    btninput.style = "display:none;";
+    
 });
 
 

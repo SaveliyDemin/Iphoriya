@@ -503,7 +503,7 @@ main {
 }
 .btninput{
     position: absolute;
-    right: 85px;
+    right: 86.6px;
     padding: 8px 20px;
     width: 15%;
     font-size: 18px;
@@ -511,20 +511,27 @@ main {
     color: whitesmoke;
     border: none;
     outline: none;
-    border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     cursor: pointer;
     text-align: start;
     display: flex;
     justify-content: start;
     display: none;
     letter-spacing: 0.5px;
+    transition: 0.5s all;
 
+}
+.btninput:hover , .btnlupalook:hover{
+    background-color: #b0bfd7;
+    color: #000000;
 }
 .btnlupalook{
     position: absolute;
     top: 10px;
-    right: 20px;
+    right: 25px;
     font-size: 16px;
+    rotate: 90deg;
 }
 .input {
     width: 80%;
@@ -579,7 +586,7 @@ main {
     background-color: rgb(230, 230, 230);
     border-bottom-right-radius: 10px;
     width: 200px;
-    height: 51vh;
+    height: 53%;
     margin: 0 0 10px 0 ;
     display: none;
     border-right: 1px solid rgb(65, 65, 65);
@@ -606,7 +613,7 @@ main {
 .btnsentings , .aboutas ,.company{
     background-color: rgb(197, 197, 197);
     width: 80%;
-    margin: 15px 15px;
+    margin: 15.5px 15px;
     border: none;
     padding: 10px 0;
     cursor: pointer;
@@ -614,7 +621,7 @@ main {
     font-size: 18px;
     color: rgb(0, 0, 0);
     transition: 0.5s all;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
 }
 .btnsentings:hover , .aboutas:hover ,.company:hover{ 
     background-color: #9e9e9e;
@@ -623,10 +630,10 @@ main {
     background-color: transparent;
     border: none;
     transition: 0.5s all;
-    margin: 0px 15px;
+    margin: 1px 15px;
     padding: 13px 0;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 17px;
     color: rgb(0, 0, 0);
     width: 80%;
     animation-name: review;
@@ -636,7 +643,6 @@ main {
 }
 .review:hover{
     text-decoration: underline solid 2px black ;
-    margin: 0px 20px;
     animation-name: review1;
     animation-duration: 2s;
     animation-direction: alternate;
@@ -804,15 +810,13 @@ main {
 }
 .afterclickreview{
     background-color: #dbdbdb;
-    width: 950px;
+    width: 1150px;
     height: 450px;
     background-color: rgb(228, 228, 228);
     border-bottom-right-radius: 10px;
     border-bottom: 1px solid black;
     border-right: 1px solid black;
     display: none;
-    border-top: 1px solid black;
-    
 }
 .formarev{
     background-color: #dbdbdb;
@@ -915,12 +919,12 @@ main {
     animation-duration: 1s;
     animation-direction: reverse;
     animation-timing-function: ease-in-out;
+    overflow-x: scroll none;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 @keyframes movinglog {
     from{
-        top: 132px;
         right: 0;
     }
     to{
@@ -1196,5 +1200,121 @@ main {
     .footheader{
         height: 11vh;
     }
+}
+footer{
+    width: 100%;
+    height: 70vh;
+    background-color: lightgray;
+    border-top: 1px solid black;
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 200px 1fr 1fr 1fr 320px;
+    grid-template-rows: 1fr;
+    z-index: 200000000;
+    gap: 10px;
+    grid-template-areas: 
+    'footercont1 footercont2 footercont3 footercont4 footercont5';
+}
+.footercont1{
+    grid-area: footercont1;
+}
+.footercont2{
+    grid-area: footercont2;
+}
+.footercont3{
+    grid-area: footercont3;
+}
+.footercont4{
+    grid-area: footercont4;
+}
+.footercont5{
+    grid-area: footercont5;
+}
+.titlecont1footer  , .titlecont2footer , .titlecont3footer , .titlecont4footer , .titlecont5footer{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont1nomer{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 35px;
+    color: green;
+    font-size: 18px;
+}
+.cont1nomer>h3:hover {
+    text-decoration: underline 1px solid green;
+    cursor: pointer;
+}
+.cont1description{
+    width: 100%;
+    height: 20%;
+    margin: 0 0 0 35px;
+    color: #000000;
+    font-size: 18px;
+}
+.cont1description>p{
+    cursor: pointer;
+}
+.cont1img{
+    width: 100%;
+    height: 50%;
+    margin: 0 0 0 35px;
+}
+.cont1img>svg{
+    height: 30%;
+    width: 22%;
+    cursor: pointer;
+}
+.footerparagraf{
+    color: rgb(126, 126, 126);
+    margin: 25px 0 0 45px;
+    font-size: 18px;
+    width: 95%;
+}
+.footerparagraf:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.iconscont5footer{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 10px ;
+    font-size: 25px;
+    color: #000000;
+    
+}
+.facebook ,.instagram, .youtube , .telegram , .whatsapp , .tictok{
+    margin: 5px 9px;
+    transition: 0.4s all;
+    height: 10%;
+}
+.facebook:hover ,.instagram:hover , .youtube:hover , .telegram:hover , .whatsapp:hover , .tictok:hover{
+    cursor: pointer;
+    color: gray;
+    transition: 0.4s all;
+}
+.minifooter{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    width:100% ;
+    height: 15vh;
+    background-color: darkgray;
+    margin: 0 0 10px 0;
+}
+.minifootertitle{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color: rgba(53, 53, 53, 0.961);
 }
 
