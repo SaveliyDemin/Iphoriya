@@ -2,362 +2,1316 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    letter-spacing: 0.3px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-body{
-    background-color: lightgray;
-}
-header{
+.block{
     width: 100%;
-    height: 50vh;
-    padding: 20px;
-    position: fixed; 
-    top: 0; 
-}
-head{
-    width: 100%;
-    height: 100%;
-}
-.headpart1{
-    display: flex;
-    width: 100%;
-    height: 35%;
-    border: none;
-    border-radius: 10px;
-    background-color: aliceblue;
-    margin: 15px 0;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-}
-.title{
-    width: 20%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.afterclickbtnsearch{
-    width: 62%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 8.5px;
+    z-index: 10;
+    background-color: transparent;
     display: none;
 }
-.afterclickbtnsearch>input{
-    width: 88%;
-    padding: 12px 30px;
-    font-size: 20px;
-    border-radius: 10px;
-    outline: none;
-    border: 1px solid rgb(255, 255, 255);
-    background-color: rgb(232, 232, 232);
-    color: rgb(0, 0, 0);
-    animation-name: movinginput;
-    animation-duration: 0.75s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    
+body{
+    background-color: rgb(239, 239, 239);
 }
-@keyframes movinginput{
-    0%{
-        width: 0;
-    }
-    5%{
-        width: 4%;
-    }
-    10%{
-        width: 8%;
-    }
-    15%{
-        width: 12%;
-    }
-    20%{
-        width: 16%;
-    }
-    25%{
-        width: 20%;
-    }
-    30%{
-        width:24%;
-    }
-    35%{
-        width: 28%;
-    }
-    40%{
-        width: 32%;
-    }
-    45%{
-        width: 36%;
-    }
-    50%{
-        width: 40%;
-    }
-    55%{
-        width: 44%;
-    }
-    60%{
-        width: 48%;
-    }
-    65%{
-        width: 52%;
-    }
-    70%{
-        width: 56%;
-    }
-    75%{
-        width: 60%;
-    }
-    80%{
-        width: 64%;
-    }
-    85%{
-        width: 68%;
-    }
-    90%{
-        width: 74%;
-    }
-    95%{
-        width: 80%;
-    }
-
-    100%{
-        width: 88%;
-    }
+.glava{
+    width: 100%;
+    height: 250vh;
 }
-.infarmation{
-    width: 62%;
+.head{
+    display: flex;
+    width: 100%;
+    height: 3.25%;
+    border-bottom: 1px solid black;
+    background-color: rgb(255, 255, 255);
+}
+.titleform{
+    width: 8%;
     height: 100%;
     display: flex;
-    letter-spacing: 0.45px;
+    justify-content: center;
+    align-items: center;
 }
-.infarmationpart1,.infarmationpart2 ,.infarmationpart3{
+.titleform>svg{
+    width: 30%;
+    cursor: pointer;
+    display: none;
+    animation-name: movinghomebtn;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+}
+@keyframes movinghomebtn{
+    from{
+        margin: 0;
+        opacity: 1;
+    }
+    to{
+        margin: 0 40px 0 0;
+        opacity: 0;
+    }
+}
+.titlebtn{
+    display: flex;
+    border: none;
+    background-color: transparent;
+    justify-content: center;
+    cursor: pointer;
+    animation-name: movingtitlebtn;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-direction: reverse; 
+}
+.titlebtn>img{
+    width: 40%;
+    height: 20%;
+}
+@keyframes movingtitlebtn{
+    from{
+        margin: 0;
+        opacity: 1;
+    }
+    to{
+        margin: 0 40px 0 0;
+        opacity: 0;
+    }
+}
+.chosingmenu{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    letter-spacing: 0.4px;
+}
+.menuword1{
+    height: 100%;
+    width: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.menuword2{
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.menuword2end{
+    height: 100%;
+    width: 25%;
+    display: flex;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.menuword3{
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.menuword4{
+    height: 100%;
+    width: 26%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.menuword1>p{
+    font-size: 19px;
+    cursor: pointer;
+    color: black;
+}
+.menuword1:hover {
+    color: rgb(255, 123, 0);
+    border-bottom: 2px solid rgb(255, 123, 0);
+}
+.menuword2>p{
+    font-size: 19px;
+    cursor: pointer;
+    color: black;
+}
+.menuword2:hover {
+    color: rgb(255, 123, 0);
+    border-bottom: 2px solid rgb(255, 123, 0);
+}
+.menuword2end>p{
+    font-size: 19px;
+    cursor: pointer;
+    color: black;
+}
+.menuword2end:hover {
+    color: rgb(255, 123, 0);
+    border-bottom: 2px solid rgb(255, 123, 0);
+}
+.menuword3>p{
+    font-size: 19px;
+    cursor: pointer;
+    color: black;
+}
+.menuword3:hover {
+    color: rgb(255, 123, 0);
+    border-bottom: 2px solid rgb(255, 123, 0);
+}
+.menuword4>p{
+    font-size: 19px;
+    cursor: pointer;
+    color: black;
+}
+.menuword4:hover {
+    color: rgb(255, 123, 0);
+    border-bottom: 2px solid rgb(255, 123, 0);
+}
+
+.endheaderform{
+    width: 57%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.endheader{
     width: 50%;
     height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    transition: 0.5s all;
+    justify-content: start; 
 }
-.locdotform ,.locdotform2 ,.locdotform3{
+.endheadmenu{
+    width: 45%;
     height: 100%;
-    width: 15%;
     display: flex;
-    align-items: center;
-    color: gray;
-    font-size: 23px;
-    transition: 0.5s all;
-
-}
-.paragrafspart1,.paragrafspart2 ,.paragrafspart3{
-    font-size: 19px;
-    color: gray;
-    cursor: pointer;
-    transition: all 0.5s;
-}
-.infapart3p1{
-    color: black;
-    margin: 0 0 5px 0;
-    transition: all 0.5s;
-}
-.infapart3p2{
-    display: flex;
-    transition: all 0.5s;
-}
-.greenp{
-    margin: 0 0 0 10px;
-    text-decoration: underline;
-    color: green;
-    transition: all 0.5s;
-}
-.greenp:hover{
-    text-decoration: none;
-}
-.or:hover , .locdotform3:hover{
-    color: green;
-}
-.infapart3p1>h3:hover{
-    color: green;
-}
-.paragrafspart1:hover,.locdotform:hover ,.paragrafspart2:hover,.locdotform2:hover ,.paragrafspart3:hover,.locdotform3:hover{
-    color: green;
-}
-.btns{
-    width:18% ;
-    display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
-.btnsearch,.btnmenu,.btnshop{
-    padding: 12px;
-    background-color: rgb(88, 192, 88);
-    border-radius: 10px;
-    border: none;
-    font-size: 22px;
-    cursor:pointer ;
-    color: aliceblue;
-    transition: 0.5s all;
-    z-index: 10;
-    display: block;
-}
-.btnsearchxmark{
-    padding: 11px 12px;
-    background-color: rgb(183, 183, 183);
-    border-radius: 10px;
-    border: none;
-    font-size: 25px;
-    cursor:pointer ;
-    color: rgb(255, 255, 255);
-    transition: 0.5s all;
-    display: none ; 
-    animation-name: movingbtnx;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-direction: reverse;
-    
-}
-.btnmenuxmark{
-    padding: 11px 12px;
-    background-color: rgb(183, 183, 183);
-    border-radius: 10px;
-    border: none;
-    font-size: 25px;
-    cursor:pointer ;
-    color: rgb(255, 255, 255);
-    transition: 0.5s all;
-    display: none; 
-    animation-name: movingbtnx2;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-direction: alternate;
-    
-}
-@keyframes movingbtnx{
-    to{
-        rotate: 180deg;
-    }
-    from{
-        rotate: 0deg;
-    }
-}
-@keyframes movingbtnx2{
-    to{
-        padding: 11px 12px;
-        font-size: 25px;
-        opacity: 1;
-    }
-    from{
-        font-size: 0;
-        opacity: 0;
-        padding: 0;
-    }
-}
-.btnsearch:hover,.btnmenu:hover,.btnshop:hover{
-    color: blue;
-}
-.headpart2{
-    width: 100%;
-    height: 20%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    color: gray;
-    transition: all 0.5s;
-    font-size: 20px;
-    border: none;
-    border-radius: 10px;
-    background-color: aliceblue;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-}
-.paragrafpart2{
-    width: 7%;
-    text-align: center;
-    transition: all 0.3s;
-    cursor: pointer;
-
-}
-.p1:hover,.p2:hover,.p3:hover,.p4:hover,.p5:hover,.p6:hover,.p7:hover,.p8:hover,.p9:hover,.p10:hover{
-    color: rgb(47, 197, 47);
-}
-.headpart3{
-    animation-name: movingpart3;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-direction: reverse;
-    margin: 20px 0 ;
-    width: 100%;
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: gray;
-    transition: all 0.5s;
-    font-size: 20px;
-    border: none;
-    display: none;
-    border-radius: 10px;
-    background-color: aliceblue;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-}
-@keyframes movingpart3{
-    from{
-        opacity: 1;
-    }
-    to{
-        opacity: 0;
-    }
-}
-.headpart3>form{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100%;
-    width: 60%;
-}
-.paragrafpart3{
-    width: 14%;
-    text-align: center;
-    transition: all 0.3s;
-    cursor: pointer;
-
-}
-main{
-    width: 100%;
-    height: 300vh;
-}
-footer{
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.footrightbar{
-    height: 100%;
-    width: 65%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.footleftbar{
+.endword1{
     height: 100%;
     width: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
-.footleftbar>form{
-    width: 90%;
+.endword2{
     height: 100%;
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
-.footrightbar>form{
-    width: 90%;
+.endword1>p{
+    font-size: 19px;
+    cursor: pointer;
+    color: black;
+}
+.endword1:hover {
+    color: rgb(255, 123, 0);
+    border-bottom: 2px solid rgb(255, 123, 0);
+}
+.endword2>p{
+    font-size: 19px;
+    cursor: pointer;
+    color: black;
+}
+.endword2:hover {
+    color: rgb(255, 123, 0);
+    border-bottom: 2px solid rgb(255, 123, 0);
+}
+.endiconsform{
+    width: 55%;
     height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
-.part1footleftbar,.part2footleftbar,.part3footleftbar,.part4footleftbar{
+.iconsearch ,.iconbuy ,.iconregistration{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(30, 30, 43);
+    font-size: 18px;
+}
+.iconsearch>i ,.iconbuy>i ,.iconregistration>i{
+    cursor: pointer;
+}
+.afterclickbtnsearch{
     width: 100%;
-    border-radius: 10px ;
-    border: none;
+    height: 75%;
     background-color: white;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-    height: 22%;
-    margin: 13px 0;
+    animation-name: movingsearchform;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+@keyframes movingsearchform{
+    from{
+        top: 0px;
+    }
+    to{
+        top: -80%;
+    }
+}
+.inputform{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.inputform>input{
+    padding: 0 0 0 35px;
+    width: 60%;
+    height: 50%;
+    font-size: 20px;
+    border: 1.5px solid rgb(148, 148, 148);
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.5s;
+}
+.inputform>input:hover{
+    border: 1.5px solid rgb(28, 28, 28) ;
+}
+.search{
+    position: absolute;
+    left: 21%;
+    color: gray;
+}
+.fastlincsform{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(44, 44, 44);
+    font-size: 25px;
+}
+.choicelincsform{
+    width: 100%;
+    height: 60%;
+}
+.clockbtnform,.phonebtnform,.redmibtnform,.cleanerbtnform,.powerbtnform{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+}
+.clockbtnform>button,.phonebtnform>button,.redmibtnform>button,.cleanerbtnform>button,.powerbtnform>button{
+    width: 55%;
+    height: 65%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: all 0.3s;
+    color: gray;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.clockbtnform>button:hover,.phonebtnform>button:hover,.redmibtnform>button:hover,.cleanerbtnform>button:hover,.powerbtnform>button:hover{
+    background-color: lightgray;
+    color: black;
+}
+.xmark{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+.xmark>button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 23.5px;
+    margin: 20px 0 0 20px;
+    transition: all 0.3s;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.xmark>button:hover{
+    background-color: red;
+    color: white;
+}
+.iconregistration1{
+    display: none;
+    width: 25%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: rgb(30, 30, 43);
+    font-size: 18px;
+}
+.iconregistration1>i{
+    cursor: pointer;
+}
+ .afterclickperson{
+    width: 100%;
+    height: 7.5%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    display: none;
+}
+.formregistor{
+    width: 10%;
+    height: 90%;
+    display: block;
+    margin: 15px 15px 0 0;
+}
+.form1{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid gray;
+    color: gray;
+    font-size: 18.5px;
+}
+.form2{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    border-top: 1px solid gray;
+    color: gray;
+    font-size: 18.5px;
+} 
+.form1>p ,.form2>p{
+    cursor: pointer;
+}
+.form1>p:hover,.form2>p:hover{
+    color: black;
+    text-decoration: underline 1px solid black;
+}
+.dophead1{
+    width: 100%;
+    height: 10%;
+    background-color: rgb(229, 229, 229);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.112);
+    
+}
+.dophead2{
+    width: 100%;
+    height: 17.5%;
+    background-color:  rgb(193, 193, 193);
+    display: flex;
+    display: none;
+    border-bottom: 1px solid black;
+}
+.dophead3{
+    width: 100%;
+    height: 19%;
+    background-color: rgb(193, 193, 193);
+    display: flex;
+    display: none;
+    border-bottom: 1px solid black;
+}
+
+.formtitles{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.xiaomititleform,.redmititleform,.pocotitleform{
+    width: 33.33%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pocotitleform>p{
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.pocotitleform{
+    border-left: 1px solid rgb(0, 0, 0);
+}
+.pocotitleform>p:hover{
+    color: rgb(255, 136, 0);
+}
+.redmititleform>p{
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.redmititleform{
+    border-right: 1px solid rgb(0, 0, 0);
+    border-left: 1px solid rgb(0, 0, 0);
+}
+.redmititleform>p:hover{
+    color: rgb(255, 136, 0);
+}
+.xiaomititleform>b{
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.xiaomititleform{
+    border-right: 1px solid rgb(0, 0, 0);
+}
+.xiaomititleform>b:hover{
+    color: rgb(255, 136, 0);
+}
+footer{
+    width: 100%;
+    background-color: rgb(30, 30, 30);
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+.foot{
+    width: 100%;
+    background-color: rgb(30, 30, 30);
+    height: 6%;
+    display: flex;
+    /* justify-content: space-between; */
+    border-top: 2px solid snow;
+}
+main{
+    width: 100%;
+    height: 80%;
+}
+.mainreklamformpart1{
+    width: 100%;
+    height: 30%;
+    background-image: url(../img/9842ec1b8266af568455fff5dc1f1ea2.webp);
+    background-size: cover;
+    display: flex;
+    margin: 2.5px 0 0 0;
+}
+.mainreklamformpart2{
+    display: none;
+    width: 100%;
+    height: 30%;
+    background-image: url(../img/edc6810102c2cd334ed84ae49429d505.webp);
+    background-size: cover;
+    margin: 2.5px 0 0 0;
+}
+.mainreklamformpart3{
+    display: none;
+    width: 100%;
+    height: 30%;
+    background-image: url(../img/872b6bbedc706ba1bffef8d938f3bf05.webp);
+    background-size: cover;
+    margin: 2.5px 0 0 0;
+}
+.mainreklamformpart4{
+    display: none;
+    width: 100%;
+    height: 30%;
+    background-image: url(../img/c043095c22fa941ec33a01f5f6df26ae.webp);
+    background-size: cover;
+    margin: 2.5px 0 0 0;
+}
+.btnleftformpart1,.btnleftformpart2,.btnleftformpart3,.btnleftformpart4{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnleftformpart1>button,.btnleftformpart2>button,.btnleftformpart3>button,.btnleftformpart4>button{
+    padding: 7.5px;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btnleftformpart4>button{
+    background-color: aliceblue;
+}
+.btnleftformpart4>button>i{
+    color: black;
+}
+.btnrightformpart4>button{
+    background-color: aliceblue;
+}
+.btnrightformpart4>button>i{
+    color: black;
+}
+.arrowright4{
+    background-color: aliceblue !important;
+}
+.btnrightformpart1,.btnleftformpart2,.btnleftformpart3,.btnleftformpart4{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    margin: 0 50px 0 0;
+    align-items: center;
+}
+.btnrightformpart1>button,.btnrightformpart2>button,.btnrightformpart3>button,.btnrightformpart4>button{
+    padding: 7.5px;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.arrowleft{
+    color: lightgray;
+    rotate: 180deg;
+    font-size: 17px;
+}
+.arrowright{
+    color: lightgray;
+    font-size: 17px;
+}
+.descripformreklam1,.descripformreklam2{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnleftformpart2,.btnleftformpart3,.btnleftformpart4{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+}
+.descripformreklam1>form{
+    width: 90%;
+    height: 60%;
+}
+.titledescripreklam1{
+    width: 100%;
+    height: 40%;
+}
+.paragraftitledescrip1{
+    font-size: 45px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,  ;
+}
+.paragraftitledescrip2{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.titledescripreklam2{
+    width: 100%;
+    height: 40%;
+    margin: 40px 0 0 0;
+}
+.pricereklampart1{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+.paragrafprice{
+    font-size: 23px;
+    margin: 0  12px 0 0;
+}
+.paragrafpriceminus{
+    font-size: 18px;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: line-through 1px solid gray;
+}
+.formreklambtnbuy{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+.btnbuyreklam1{
+    padding: 8px 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: black;
+    font-size: 18px;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin: 0 20px 0 0 ;
+}
+.btnbuyreklam1:hover{
+    background-color: rgb(42, 42, 42);
+}
+.formreklambtnbuy>p{
+    font-size: 18.5px;
+    color: black;
+    margin: 0 5px 0 0;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.formreklambtnbuy>i{
+    font-size: 18.5px;
+    color: rgb(0, 0, 0);
+    margin: 0 5px 0 0;
+    cursor: pointer;
+}
+.formreklambtnbuy>p:hover{
+    text-decoration: underline 1px solid black;
+}
+.mainreklamformpart4>form{
+    width: 100%;
+    height: 60%;
+}
+.descripformreklam4{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.titledescripreklam7{
+    color: white;
+    font-size: 37px;
+    width: 100%;
+    height: 70%;
+}
+.paragraftitledescrip9,.paragraftitledescrip10{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.paragraftitledescrip9{
+    margin: 20px 0 0 0;
+}
+.btnrightformpart4{
+    width: 55%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding:  0 50px 0 0;
+}
+.titledescripreklam8{
+    height: 40%;
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+.titledescripreklam8>button{
+    padding: 7.5px 20px;
+    font-size: 18px ;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.btnrightformpart2{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0 50px 0 0;
+}
+.btnrightformpart3{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0 50px 0 0;
+}
+.descripformreklam2{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.descripformreklam2>form{
+    width: 100%;
+    height: 60%;
+}
+.titledescripreklam3{
+    width: 100%;
+    height: 50%;
+}
+.paragraftitledescrip3{
+    font-size: 40px;
+    margin: 0 0 10px 0;
+}
+.paragraftitledescrip4{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.titledescripreklam4{
+    width: 100%;
+    height: 50%;
+}
+.pricereklampart2{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+}
+.formreklambtnbuy2{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+.btnbuyreklam2{
+    padding: 7.5px 18.5px;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.formreklambtnbuy2>p{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 5px 0 0;
+}
+.formreklambtnbuy2>p>i{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 5px 0 0;
+    color: black;
+}
+.formreklambtnbuy2>p:hover{
+    text-decoration: underline 1px solid black;
+}
+.descripformreklam3{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.descripformreklam3>form{
+    height: 70%;
+    width: 100%;
+}
+.titledescripreklam3{
+    width: 100%;
+    height: 60%;
+}
+.paragraftitledescrip5{
+    font-size: 40px;
+    margin: 0 0 10px 0 ;
+}
+.paragraftitledescrip6{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.titledescripreklam4{
+    height: 40%;
+    margin: 20px 0 0 0;
+}
+.pricereklampart3{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+
+
+}
+.formreklambtnbuy3{
+    display: flex;
+    height: 60%;
+    width: 100%;
+    align-items: center;
+}
+.formreklambtnbuy3>p{
+    font-size: 18.5px;
+    color: black;
+    margin: 0 5px 0 0;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.formreklambtnbuy3>i{
+    font-size: 18.5px;
+    color: rgb(0, 0, 0);
+    margin: 0 5px 0 0;
+    cursor: pointer;
+}
+.formreklambtnbuy3>p:hover{
+    text-decoration: underline 1px solid black;
+}
+.btnbuyreklam3{
+    padding: 7.5px 18.5px;
+    height: 70%;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.formmainpart1{
+    width: 100%;
+    height: 15%;
+    margin: 10px 0 25px 0 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.informmainpart1{
+    width: 80%;
+    height: 70%;
+    background-image: url(../img/357de9393bcb4b2a7208b6bc26085036.webp);
+    background-size: cover;
+}
+.titlepart1main{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: end;
+    margin: 0 0 10px 0;
+}
+.titlepart1main>b{
+    font-size: 20px;
+    color: white;
+    margin: 0 0 0 40px;
+}
+.descrippart1main{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+.descrippart1main>p{
+    font-size: 16px;
+    color: white;
+    margin: 0 0 0 40px;
+}
+.buttonpart1main{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+.buttonpart1main>button{
+    letter-spacing: 0.2px;
+    margin: 0 0 0 39px ;
+    color: black;
+    font-size: 17px;
+    width: 17%;
+    height: 55%;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.buttonpart1main>button:hover{
+    background-color: rgb(222, 222, 222);
+}
+.titleformmainpart2{
+    width: 100%;
+    height: 4%;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+.intitlepart2{
+    width: 44%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.formmainpart2{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+}
+.formmainpart2>form{
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    gap: 12.5px;
+    grid-template-areas:
+    'part1 part2 part3 part4'
+    'part5 part6 part7 part8'
+    ;
+}
+.part1mainpart2,.part2mainpart2,.part3mainpart2,.part4mainpart2,.part5mainpart2,.part6mainpart2,.part7mainpart2,.part8mainpart2{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.2s;
+}
+.part1mainpart2:hover,.part2mainpart2:hover,.part3mainpart2:hover,.part4mainpart2:hover,.part5mainpart2:hover,.part6mainpart2:hover,.part7mainpart2:hover,.part8mainpart2:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    cursor: pointer;
+}
+.part1mainpart2{
+    grid-area: part1;
+}
+.part2mainpart2{
+    grid-area: part2;
+}
+.part3mainpart2{
+    grid-area: part3;
+}
+.part4mainpart2{
+    grid-area: part4;
+}
+.part5mainpart2{
+    grid-area: part5;
+}
+.part6mainpart2{
+    grid-area: part6;
+}
+.part7mainpart2{
+    grid-area: part7;
+}
+.part8mainpart2{
+    grid-area: part8;
+}
+.titleformpart1mainpart2{
+    width: 100%;
+    height: 50%;
+    font-size: 17px;  
+    padding: 20px 0 0 20px; 
+}
+.titleformpart2mainpart2{
+    width: 100%;
+    height: 50%;
+    font-size: 17px;  
+    padding: 20px 0 0 20px; 
+}
+.titleformpart3mainpart2{
+    width: 100%;
+    height: 50%;
+    font-size: 17px;  
+    padding: 20px 0 0 20px; 
+}
+.titleformpart4mainpart2{
+    width: 100%;
+    height: 50%;
+    font-size: 17px;  
+    padding: 20px 0 0 20px; 
+}
+.titleformpart5mainpart2{
+    width: 100%;
+    height: 50%;
+    font-size: 17px;  
+    padding: 20px 0 0 20px; 
+}
+.titleformpart6mainpart2{
+    width: 100%;
+    height: 50%;
+    font-size: 17px;  
+    padding: 20px 0 0 20px; 
+}
+.titleformpart7mainpart2{
+    width: 100%;
+    height: 50%;
+    font-size: 17px;  
+    padding: 20px 0 0 20px; 
+}
+.titleformpart8mainpart2{
+    width: 100%;
+    height: 50%;
+    font-size: 17px;  
+    padding: 20px 0 0 20px; 
+}
+.skidkaparagraf{
+    margin: 15px 0 0 0 ;
+    color: rgb(255, 140, 0);
+    border: 1px solid rgb(255, 140, 0);
+    background-color: rgba(255, 140, 0, 0.199);
+    border-radius: 10px;
+    padding: 2.5px;
+    width: 38.8%;
+    font-size: 14px;
+    cursor: default;
+}
+.formpart2part1mainpart2,.formpart2part2mainpart2,.formpart2part3mainpart2,.formpart2part4mainpart2,.formpart2part5mainpart2,.formpart2part6mainpart2,.formpart2part7mainpart2,.formpart2part8mainpart2{
+    height: 50%;
+    width: 100%;
+    display: flex;
+}
+.priceformpart1,.priceformpart2,.priceformpart3,.priceformpart4,.priceformpart5,.priceformpart6,.priceformpart7,.priceformpart8{
+    width: 50%;
+    height: 100%;
+    margin: 50px 0 0 20px;
+}
+.priceminus{
+    font-size: 13px;
+    color: gray;
+    text-decoration: line-through 1px solid gray;
+}
+.imgformpart1,.imgformpart2,.imgformpart3,.imgformpart4,.imgformpart5,.imgformpart6,.imgformpart7,.imgformpart8{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.imgformpart1>img,.imgformpart2>img,.imgformpart3>img,.imgformpart4>img,.imgformpart5>img,.imgformpart6>img,.imgformpart7>img,.imgformpart8>img{
+    width: 70%;
+    height: 85%;
+}
+.imgformpart1>img{
+    width: 80%;
+    height:100% ;
+}
+.imgformpart6>img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.form1foot,.form2foot,.form3foot,.form4foot{
+    width: 15.219%;
+    height: 85%;
+}
+.formtitle1foot,.formtitle2foot,.formtitle3foot,.formtitle4foot,.formtitle5foot{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: end;
+    margin: 0 0 0 25px;
+    color: white;
+    font-size: 18px;
+}
+.formlinkword{
+    width: 100%;
+    height: 8.1%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0 0 25px;
+    color: gray;
+    font-size: 15px;
+}
+.formlinkword>p:hover{
+    color: aliceblue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.formxiaomiicons{
+    width: 100%;
+    height: 20%;
+    display: flex;
+}
+.formxiaomiicons>a{
+    cursor: default;
+    background-color: antiquewhite;
+}
+.form50{
+    width: 65%;
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.vklogo,.oklogo,.tglogo,.milogo{
+    width: 12%;
+    cursor: pointer;
+    border-radius: 40%;
+}
+.subscribe{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    margin: 0 0 0 25px;
+    color: white;
+    font-size: 18px;
+}
+.inputfootform{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.inputfootform>input{
+    height: 70%;
+    padding: 5px 20px;
+    width: 87%;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    transition: all 0.5s;
+}
+.inputfootform>input:hover{
+    border: 2px solid rgb(255, 132, 0);
+    cursor: pointer;
+}
+.arrowfoot{
+    position: absolute;
+    color: white;
+    right: 10%;
+    cursor: pointer;
+}
+.arrowfoot:hover{
+    color: lightgray;
+}
+.downloadform{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.formpart1download{
+    width: 87%;
+    height: 75%;
+    border: 1px solid rgb(255, 255, 255);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.formpart2download{
+    width: 87%;
+    height: 25%;
+    border: 1px solid rgb(255, 255, 255);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.formdownloadflex{
+    width: 90%;
+    height: 75%;
+}
+.titleformfoot5{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 7.5px 0 2.5px 0;
+}
+.titleformpart1{
+    width: 80%;
+    height: 25%;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    color: white;
+}
+.titleformfoot5cont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titleformpart2{
+    width: 50%;
+    height: 25%;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    color: white;
+}
+.downloadformpart3{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    color: white;
+}
+.formdowloadapstore{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.formdowloadapstore>b:hover{
+    text-decoration: underline;
+}
+.formdowloadapstore>b{
+    margin:0 0 0 10px ;
+    cursor: pointer;
+}
+.googleplay{
+    font-size: 20px;
+    cursor: pointer;
+}
+.formfoot1{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+}
+.formfoot2{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+}
+.formfoot2>b:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.formfoot3container{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.formfoot3{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 100%;
+    color: white;
+}
+.formfoot3>b:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.wifiform{
+    width: 5%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.wifiform>i{
+    cursor: pointer;
+}
+.form5foot{
+    width: 25%;
+    height: 85%;
 }
